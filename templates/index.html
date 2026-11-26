@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask POST Sederhana</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <main class="card">
+        <h1>Parsing Parameter POST</h1>
+
+        <form method="POST" action="/">
+            <label for="nama">Masukkan nama Anda</label>
+            <input type="text" id="nama" name="nama" placeholder="" required>
+            <button type="submit">Kirim</button>
+</form>
+
+{% if nama %}
+<p>Halo, <strong>{{ nama }}</strong>! Selamat datang.</p>
+{% endif %}
+
+    </main>
+</body>
+</html>
